@@ -1,0 +1,21 @@
+            <h2>Basics</h2>
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#api">What is an API?</a></li>
+  <li><a href="#rest">What is REST?</a></li>
+  <li><a href="#analytics">Alma Analytics API</a></li>
+  <li><a href="#code">PHP or Javascript?</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div class="tab-pane active" id="api">one</div>
+  <div class="tab-pane" id="rest">two</div>
+  <div class="tab-pane" id="analytics">three</div>
+  <div class="tab-pane" id="code">...</div>
+</div>
+
+<script>
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+});
+</script>

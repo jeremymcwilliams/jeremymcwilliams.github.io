@@ -49,7 +49,7 @@
           <a class="brand" href="#">Intro to Alma Analytics API</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+             
             </p>
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -66,12 +66,15 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
+              <li class="nav-header">Intro</li>
+              <li class="active leftnav"><a href="#" id="welcome">Welcome</a></li>
+              <li class="leftnav"><a href="#" id="basics">Basics</a></li>
               <li class="nav-header">Part 1 - Analytics Report</li>
-              <li class="active"><a href="#">Link</a></li>
+              <li ><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
+              <li class="nav-header">Part 2 - Using the API</li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
               <li><a href="#">Link</a></li>
@@ -86,23 +89,20 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-          <div class="hero-unit">
-            <h1>Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-    
-    <pre><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container-fluid"&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="icon-bar"&gt;&lt;/span&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="icon-bar"&gt;&lt;/span&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="icon-bar"&gt;&lt;/span&gt;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/button&gt;</code></pre>
-    
+          <div class="hero-unit" id='main'>
+          
+
           </div>
 
 
         </div><!--/span-->
+      
+      
+     
+      
+      
       </div><!--/row-->
+      
 
       <hr>
 
@@ -116,8 +116,32 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!--<script src="../assets/js/jquery.js"></script>-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" ></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+
+<script>
+$( "#main" ).load( "content/welcome.html" );
+
+$("li.leftnav a").click(function(){
+
+	p=$(this).attr("id");
+	page="content/"+p+".html";
+	$("#main").fadeOut("slow", function(){
+		$( "#main" ).load( page , function(){
+			$("#main").fadeIn("slow");
+		});
+		
+	
+	});
+	
+	$("li.leftnav").removeClass("active");
+	$(this).parent("li.leftnav").addClass("active");
+	
+
+});
+
+
+</script>
 
 
   </body>
