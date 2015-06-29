@@ -2,23 +2,27 @@
 
 <ul class="nav nav-tabs" id="myTab">
   <li class="active"><a href="#ov">Overview</a></li>
-  <li><a href="#php">PHP</a></li>
+  <li><a href="#javascript">javascript code</a></li>
+  <li><a href="#php">PHP code</a></li>
 </ul>
  
 <div class="tab-content">
   <div class="tab-pane active" id="ov">
+<h4>Use the WorldCat Search API <a href='https://platform.worldcat.org/api-explorer/wcapi/LibraryLocations/GetByISBN'>LibraryLocations GetByISBN method</a></h4>
 
-<p>You need:</p>
+<h5>Purpose</h5> find local libraries who own a title, given the ISBN. You'll use this to create the list of owning libraries for the app.
+<hr>
+<h5>You need:</h5>
 <ul>
 	<li>ISBN</li>
 	<li>Zip Code</li>
 	<li>Worldcat API Key</li>
 </ul>
-
-<p>Request Format:</p>
+<hr>
+<h5>Request Format:</h5>
 http://www.worldcat.org/webservices/catalog/content/libraries/isbn/{ISBN}?location={ZIP Code}&wskey={Wordcat API Key}
-
-<p>Sample Response:</p>
+<hr>
+<h5>Sample Response:</h5>
 <pre><code>&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
 &lt;holdings xsi:noNamespaceSchemaLocation="http://www.loc.gov/standards/iso20775/N121_ISOholdings_v4.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
 &nbsp;&nbsp;&lt;holding&gt;
@@ -67,6 +71,9 @@ http://www.worldcat.org/webservices/catalog/content/libraries/isbn/{ISBN}?locati
   
   
   </div>
+  <div class="tab-pane" id="javascript">js</div>
+  
+  
   <div class="tab-pane" id="php">php</div>
 
 </div>
