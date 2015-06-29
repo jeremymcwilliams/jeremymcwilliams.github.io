@@ -1,0 +1,79 @@
+<h2>Include the WorldCat API code</h2>
+
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#ov">Overview</a></li>
+  <li><a href="#php">PHP</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div class="tab-pane active" id="ov">
+
+<p>You need:</p>
+<ul>
+	<li>ISBN</li>
+	<li>Zip Code</li>
+	<li>Worldcat API Key</li>
+</ul>
+
+<p>Request Format:</p>
+http://www.worldcat.org/webservices/catalog/content/libraries/isbn/{ISBN}?location={ZIP Code}&wskey={Wordcat API Key}
+
+<p>Sample Response:</p>
+<pre><code>&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;
+&lt;holdings xsi:noNamespaceSchemaLocation="http://www.loc.gov/standards/iso20775/N121_ISOholdings_v4.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+&nbsp;&nbsp;&lt;holding&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;institutionIdentifier&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;ORZ&lt;/value&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;typeOrSource&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pointer&gt;http://worldcat.org/registry/institutions/&lt;/pointer&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/typeOrSource&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/institutionIdentifier&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;physicalLocation&gt;Portland State University&lt;/physicalLocation&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;physicalAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;Portland, OR 97201 United States&lt;/text&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/physicalAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;electronicAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;http://www.worldcat.org/wcpa/oclc/34077116?page=frame&amp;amp;url=http%3A%2F%2Falliance-primo.hosted.exlibrisgroup.com%2Fprimo_library%2Flibweb%2Faction%2Fsearch.do%3Ffn%3Dsearch%26ct%3Dsearch%26vid%3DPSU%26vl%28freeText0%29%3D9780385240031%26checksum%3D280eadd7bc4adaf92f98f695ef54bb32&amp;amp;title=Portland+State+University&amp;amp;linktype=opac&amp;amp;detail=ORZ%3APortland+State+University%3AAcademic Library&amp;amp;app=wcapi&amp;amp;id=OLP-&lt;/text&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/electronicAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;holdingSimple&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;copiesSummary&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;copiesCount&gt;1&lt;/copiesCount&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/copiesSummary&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/holdingSimple&gt;
+&nbsp;&nbsp;&lt;/holding&gt;
+&nbsp;&nbsp;&lt;holding&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;institutionIdentifier&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;value&gt;ORX&lt;/value&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;typeOrSource&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;pointer&gt;http://worldcat.org/registry/institutions/&lt;/pointer&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/typeOrSource&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/institutionIdentifier&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;physicalLocation&gt;Multnomah County Library&lt;/physicalLocation&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;physicalAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;Portland, OR 97205 United States&lt;/text&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/physicalAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;electronicAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;text&gt;http://www.worldcat.org/wcpa/oclc/34077116?page=frame&amp;amp;url=http%3A%2F%2Fcatalog.multcolib.org%2Fsearch%2Fi9780553378498%26checksum%3Ddfbfe9c5e0e9d8a9f520a594ce0e5ab9&amp;amp;title=Multnomah+County+Library&amp;amp;linktype=opac&amp;amp;detail=ORX%3AMultnomah+County+Library%3APublic Library&amp;amp;app=wcapi&amp;amp;id=OLP-&lt;/text&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/electronicAddress&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;holdingSimple&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;copiesSummary&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;copiesCount&gt;1&lt;/copiesCount&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/copiesSummary&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/holdingSimple&gt;
+&nbsp;&nbsp;&lt;/holding&gt;
+&lt;/holdings&gt;</code></pre>
+
+
+  
+  
+  </div>
+  <div class="tab-pane" id="php">php</div>
+
+</div>
+
+<script>
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+});
+</script>

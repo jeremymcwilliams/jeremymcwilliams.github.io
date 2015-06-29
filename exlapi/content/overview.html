@@ -20,12 +20,11 @@ The librarian wants to peruse the stacks with a laptop and barcode reader, and g
   	<li>What do I have?</li>
   	<li>How can I get what I need with what I have?</li>
   </ul>
-	In this application, we start with a barcode. 
-  
-  
-  
+	In this application, we start with a barcode, and eventually want to end up with a list of regional libraries that own this item.
+	There is no single Alma API that currently does this. However, we can use the <a href='https://developers.exlibrisgroup.com/blog/Scan-in-and-Next-Step-APIs' target='_blank'>Alma Scan In API</a> to retrieve Bib/Items/Holdings data, including ISBN, from a barcode.
+	We can then use the Worldcat Search API to get local libraries with our ISBN, using the <a href='https://platform.worldcat.org/api-explorer/wcapi/LibraryLocations/GetByISBN' target='_blank'>LibraryLocations GetByISBN</a> method.
   </p>
-  
+  <p>Since we'll be using two different web services, we'll need to have </p>
   </div>
 
 </div>

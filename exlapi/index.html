@@ -68,8 +68,8 @@
             <ul class="nav nav-list">
               <li class="nav-header">Introduction</li>
               <li class="active leftnav"><a href="#" id="welcome">Welcome</a></li>
-              <li class="leftnav"><a href="#" id="useCases">Use Cases</a></li>
-              <li class="leftnav"><a href="#" id="basics">Basics</a></li>
+              <li class="leftnav"><a href="#" id="useCases">What you'll need</a></li>
+              <li class="leftnav"><a href="#" id="basics">API Basics</a></li>
 
               <li class="nav-header">Using the Bibs API</li>
               <li class="leftnav"><a href="#" id='getAnApiKey'>Get an API Key</a></li>
@@ -79,8 +79,8 @@
               <li class="nav-header">Sample Application: Should I Weed This Book?</li>
               <li class="leftnav"><a href="#" id="overview">Overview & Strategy</a></li>
               <li class="leftnav"><a href="#" id="htmlShell">HTML shell</a></li>
-              <li class="leftnav"><a href="#" id="includeApiQuery">Include API Query</a></li>
-              <li class="leftnav"><a href="#" id="createPage">Create Page</a></li>
+              <li class="leftnav"><a href="#" id="includeApiQuery">Add the Alma Scan In API code</a></li>
+              <li class="leftnav"><a href="#" id="wcApi">Add the Worldcat Search API code</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
@@ -121,7 +121,9 @@ $( "#main" ).load( "content/welcome.html" );
 $("li.leftnav a").click(function(){
 
 	p=$(this).attr("id");
+	
 	page="content/"+p+".html";
+	//alert(page);
 	$("#main").fadeOut("slow", function(){
 		$( "#main" ).load( page , function(){
 			$("#main").fadeIn("slow");
