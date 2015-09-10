@@ -67,7 +67,7 @@ h1{
 
 }
 #rating span{
-	vertical-align: center;
+	vertical-align: middle;
 	color: red;
 	font-size: 48px;
 	font-weight: bold;
