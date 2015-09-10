@@ -61,10 +61,14 @@ h1{
 
 
 #rating{
+
+	background-image: url("https://webster.cs.washington.edu/images/rottenlargebg.png");
+		
+
+}
+#rating span{
+	vertical-align: center;
 	color: red;
 	font-size: 48px;
 	font-weight: bold;
-	background-image: url("https://webster.cs.washington.edu/images/rottenlargebg.png");
-		vertical-align: center;
-
 }
