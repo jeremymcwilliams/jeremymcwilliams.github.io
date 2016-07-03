@@ -3,10 +3,10 @@
 if (isset($_POST["barcode"])){
 	$barcode=$_POST["barcode"];
 	/*testing: */
-	$barcode="35209006573030";
+	//$barcode="35209006573030";
 	$ExlAPIKey="l7xx6ff17de53ac24c4495e0b5522e546b41";
 	
-	$apiQuery="https://api-na.hosted.exlibrisgroup.com/almaws/v1/items?item_barcode=35209006573030&apikey=$ExlAPIKey";
+	$apiQuery="https://api-na.hosted.exlibrisgroup.com/almaws/v1/items?item_barcode=$barcode&apikey=$ExlAPIKey";
 	$xml=simplexml_load_file($apiQuery);
 	$isbn=$xml->bib_data->isbn;
 	$title=$xml->bib_data->title;
@@ -25,7 +25,7 @@ if (isset($_POST["barcode"])){
 	foreach ($wcXml->holding as $holding){
 		$location=$holding->physicalLocation;
 		
-		echo $location;
+		echo $location."<br/>";
 	
 	
 	}
@@ -57,7 +57,7 @@ if (isset($_POST["barcode"])){
  	<div id="output"> 
  <?php
  var_dump($_REQUEST);
- if ($xml){
+ if (!empty($xml)){
  
  echo "$title / $author / $isbn";
  
