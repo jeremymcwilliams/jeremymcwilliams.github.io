@@ -1,5 +1,20 @@
 <h2>Use the API</h2>
 
 <pre><code>
-&lt;?php $ch = curl_init(); $url = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/conf/libraries/{libraryCode}/open-hours'; $templateParamNames = array('{libraryCode}'); $templateParamValues = array(urlencode('Watzek')); $url = str_replace($templateParamNames, $templateParamValues, $url); $queryParams = '?' . urlencode('from') . '=' . urlencode('today') . '&amp;' . urlencode('apikey') . '=' . urlencode('l7xx0db47d2e660b424fba9282fc8c6486d2'); curl_setopt($ch, CURLOPT_URL, $url . $queryParams); curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE); curl_setopt($ch, CURLOPT_HEADER, FALSE); curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET'); $response = curl_exec($ch); curl_close($ch); var_dump($response); ?&gt;
-</pre></code>
+&lt;?php<br />
+$ch = curl_init();<br />
+$url = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/conf/libraries/{libraryCode}/open-hours';<br />
+$templateParamNames = array('{libraryCode}');<br />
+$templateParamValues = array(urlencode('Watzek'));<br />
+$url = str_replace($templateParamNames, $templateParamValues, $url);<br />
+$queryParams = '?' . urlencode('from') . '=' . urlencode('today') . '&amp;' . urlencode('apikey') . '=' . urlencode('l7xx0db47d2e660b424fba9282fc8c6486d2');<br />
+curl_setopt($ch, CURLOPT_URL, $url . $queryParams);<br />
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);<br />
+curl_setopt($ch, CURLOPT_HEADER, FALSE);<br />
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');<br />
+$response = curl_exec($ch);<br />
+curl_close($ch);<br />
+<br />
+var_dump($response);<br />
+<br />
+?&gt;</pre></code>
